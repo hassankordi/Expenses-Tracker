@@ -1,0 +1,61 @@
+
+.expense-page-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     background: linear-gradient(to right, hsl(224, 90%, 43%), hsl(226, 75%, 80%));
+}
+.expense-container{
+    width: 400px;
+    height: 580px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    
+}
+.form-group{
+    width: 100% !important;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.icons-container{
+    display: flex;
+    gap: 10px;
+    div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: #f0f0f0;
+        padding: 10px;
+        width: 50px;
+        height: 50px;
+    }
+}
+::ng-deep{
+    .p-datepicker{
+    width: 360px !important;
+    }
+    .p-button{
+        width: 100% !important;
+        margin-top: 20px;
+    }
+}
+
+.selected-icon{
+  border: 2px solid blue;
+  background-color: #e0f0ff;
+box-shadow: 0 0 5px rgba(0, 0, 255, 0.2);
+}

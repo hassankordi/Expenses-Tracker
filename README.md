@@ -1,59 +1,41 @@
-# Inovola
+👋 Hello Inovola Team!
+I'm Hassan Kordi, and I’m excited to share with you the task I’ve built as part of the interview process.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.15.
+🧭 Application Overview
+Upon launching the application, you’ll be directed to the login dashboard.
 
-## Development server
+You can log in using any dummy credentials.
 
-To start a local development server, run:
+After login, you’ll be redirected to the main page, where you'll see a default expense entry of $100.
 
-```bash
+You can see Total expenses in the front of the dashboard and its counting...
+
+You can then add more expenses and see the system in action.
+
+🛠️ Technical Highlights
+The app is built using standalone components, signals, custom directives, and pipes to ensure better performance and maintainability.
+
+I utilized RxJS to shape and manage data streams efficiently. Specifically, I used shareReplay to cache responses, as the data is not frequently updated—improving performance and reducing redundant API calls.
+
+All selected currencies are automatically converted to USD for consistent display and calculation.
+
+
+▶️ Getting Started
+To run the application locally:
+
+# 1. Install dependencies
+npm install
+
+# 2. Run the development server
 ng serve
-```
+Then open your browser and navigate to:
+http://localhost:4200
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
+🔍 Notes
+Pagination was intentionally skipped, as I believe it's best handled at the API level for better scalability. However, it’s a straightforward addition on the UI side, and I’d be happy to implement it if required.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Please let me know if you'd like me to walk you through the code or explain specific parts. I’d love the opportunity to contribute to Inovola’s mission and work alongside your talented team.
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Warm regards,
+Hassan Kordi

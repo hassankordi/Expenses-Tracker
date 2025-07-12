@@ -1,0 +1,124 @@
+<div class="page-container">
+    <!-- page content  -->
+    <div class="dashboard-container">
+        <!-- dashboard welcome header start  -->
+        <div class="dashboard-header">
+            <div class="dashboard-header-content">
+                <!-- user content  -->
+                <div class="user-content ">
+                    <p-avatar image="https://primefaces.org/cdn/primeng/images/demo/avatar/onyamalimba.png"
+                        shape="circle" />
+                    <div>
+                        <h5 class="font-bold">Good Morning</h5>
+                        <small>Welcome, {{ userName }}!</small>
+                    </div>
+                </div>
+                <!-- filter button  -->
+                <div class="filter-btn">
+                    <p-select [options]="dates" [(ngModel)]="selectedDate" optionLabel="name"
+                        placeholder="Select a Date" class="w-32 text-xs" />
+                </div>
+            </div>
+            <div class="dashboard-float-card mt-2.5">
+                <div class="total-widget">
+                    <div class="balance">
+                        <h5>Total Expenses <div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="lucide lucide-chevron-up-icon lucide-chevron-up">
+                                    <path d="m18 15-6-6-6 6" />
+                                </svg></div>
+                        </h5>
+                        <p class="text-3xl font-bold">$ {{
+                            totalExpense()| number: '1.2-2'
+                            }}</p>
+                    </div>
+                    <div class="action-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-ellipsis-vertical-icon lucide-ellipsis-vertical">
+                            <circle cx="12" cy="12" r="1" />
+                            <circle cx="12" cy="5" r="1" />
+                            <circle cx="12" cy="19" r="1" />
+                        </svg>
+                    </div>
+
+                </div>
+                <div class="widgets flex items-center justify-between">
+                    <div class="widget ">
+                        <h5 class="font-bold text-lg flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-circle-arrow-down-icon lucide-circle-arrow-down">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M12 8v8" />
+                                <path d="m8 12 4 4 4-4" />
+                            </svg>
+                            Income
+                        </h5>
+                        <p class="text-xl font-bold">$ {{
+                            balance().totalIncome | number: '1.2-2'
+                            }}</p>
+
+                    </div>
+                    <div class="widget ">
+                        <h5 class="font-bold text-lg flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-circle-arrow-up-icon lucide-circle-arrow-up">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="m16 12-4-4-4 4" />
+                                <path d="M12 16V8" />
+                            </svg>
+                            Balance
+                        </h5>
+                        <p class="text-lg font-bold">$ {{
+                            balance().totalBalance | number: '1.2-2'
+                            }}</p>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- dashboard welcome header end  -->
+        <!-- dashboard content start  -->
+        <div class="dashboard-content">
+            <div class="card">
+                <div class="font-semibold text-lg mb-2">Recent Expenses</div>
+                <ul class="record-expenses-list ">
+                    @for (item of items(); track $index) {
+                    <li class="record-expense-item">
+                        <div class="record-info flex items-center gap-2">
+                            <div class="icon circle-icon bg-blue-100 p-4 rounded-full">
+                                <div [innerHTML]="item.icon | customSafeHtml"></div>
+
+                            </div>
+                            <div class="expense-info">
+                                <h5 class="font-bold">{{item.expense}}</h5>
+                                <p class="text-xs">{{item.details}}</p>
+                            </div>
+                        </div>
+                        <div class="record-details flex flex-col items-end gap-1">
+                            <p class="text-xs font-bold">$ {{ - item.amount}}</p>
+                            <small class="date text-xs">{{item.date | date:"dd-MM-yyyy"}}</small>
+                        </div>
+
+                    </li>
+                    }
+                </ul>
+
+            </div>
+            <div routerLink="/add-expense" class="float-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-plus-icon lucide-plus">
+                    <path d="M5 12h14" />
+                    <path d="M12 5v14" />
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>

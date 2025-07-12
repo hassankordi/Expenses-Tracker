@@ -1,0 +1,104 @@
+.page-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.dashboard-container{
+    width: 400px;
+    height: 580px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.dashboard-header{
+    height: 40%;
+    background: linear-gradient(to right, hsl(224, 90%, 43%), hsl(226, 75%, 80%));
+    border-radius: 10px;
+}
+.dashboard-header-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.user-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    color: #8bb4df;
+    small{
+        color: #fff;
+        font-weight: 600;
+    }
+}
+.dashboard-float-card{
+    background-color: #496ef3;
+    padding: 20px;
+    margin: 20px;
+    transform: translateY(-2%);
+      border-radius: 10px;
+      color: white;
+}
+.total-widget{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.balance{
+   h5{
+     display: flex;
+     svg{
+        margin-inline-start: 3px;
+        margin-top: 5px;
+     }
+   }
+}
+
+.dashboard-content{
+    height: 60%;
+    transform: translateY(3%);
+    padding: 20px;
+}
+.record-expenses-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #f3f5f7;
+    overflow-y: scroll;
+    height: 270px;
+    padding: 20px;
+   
+}
+
+.record-expense-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.float-button{
+    background-color: #496ef3;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 20px;
+    right: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    svg{
+        width: 24px;
+        height: 24px;
+    }
+}

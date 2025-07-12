@@ -1,0 +1,42 @@
+.login-container{
+    background: linear-gradient(to right, hsl(224, 90%, 43%), hsl(226, 75%, 80%));
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-form{
+    background-color: white;
+    width: 400px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    color: black;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+
+.form-group{
+    width: 100% !important;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
+
+::ng-deep{
+    p-password{
+        width: 100% !important;
+    }
+    .p-button{
+        width: 100% !important;
+        margin-top: 20px;
+    }
+}

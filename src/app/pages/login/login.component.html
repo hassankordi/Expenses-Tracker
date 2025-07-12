@@ -1,0 +1,24 @@
+<div class="login-container">
+    <div class="login-form">
+        <h1 class="text-3xl font-bold ">
+            Expenses Tracker
+        </h1>
+        <form class="w-full" (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+            <div class="form-group">
+                <label for="username">User Name</label>
+                <input class="w-full" pInputText variant="filled" id="username" type="text" formControlName="username"
+                    required>
+
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <p-password variant="filled" styleClass="p-password p-component p-inputwrapper p-input-icon-right"
+                    [style]="{'width':'100%'}" [inputStyle]="{'width':'100%'}" id="password"
+                    formControlName="password" />
+            </div>
+            <div class="btn-container w-full mt-5">
+                <p-button label="Login" severity="info" class="w-full" type="submit" />
+            </div>
+        </form>
+    </div>
+</div>
